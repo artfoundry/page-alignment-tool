@@ -1,0 +1,104 @@
+form {
+	position: absolute;
+	top: 8%;
+	left: 8%;
+	width: 400px;
+	border: 1px solid black;
+	background-color: lightgray;
+	z-index: 10001;
+	box-shadow: 2px 2px 5px gray;
+	cursor: move;
+}
+
+#titlebar {
+	width: 100%;
+	height: 30px;
+	background-color: darkgray;
+	cursor: pointer;
+}
+
+.ui-icon-arrow-4-diag {
+	position: absolute;
+	right: 50%;
+	top: 10px;
+}
+
+#content {
+	padding: 20px;
+}
+
+#url {
+	width: 200px;
+	border: 1px solid black;
+}
+
+#frameContainer {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	height: 3000px;
+}
+
+#page {
+	width: 100%;
+	height: 3000px;
+}
+
+label {
+	display: inline-block;
+	padding: 10px 0;
+}
+
+.section {
+	padding: 10px 0;
+	border-bottom: 2px solid gray;
+}
+
+.section:last-child {
+	margin-bottom: 10px;
+	border-bottom: 0;
+}
+
+.vertLine {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	border-left: 1px solid black;
+	z-index: 10000;
+}
+
+.horizLine {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	border-top: 1px solid black;
+	z-index: 10000;
+}
+
+.lineHandle {
+	display: inline-block;
+	position: relative;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: yellow;
+	border: 1px black solid;
+	border-radius: 50px;
+	z-index: 10000;
+}
+
+.horizLine-handle {
+	left: 50%;
+	top: -50px;
+}
+
+.vertLine-handle {
+	top: 50px;
+	left: -50px;
+}

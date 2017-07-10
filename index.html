@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Align</title>
+	<link rel="stylesheet" type="text/css" href="lib/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<form>
+		<div id="titlebar"><span id="menu-icon" class="ui-icon ui-icon-circle-triangle-n"></span></div>
+		<span class="ui-icon ui-icon-arrow-4-diag"></span>
+		<div id="content">
+			<div class="section">
+				<div>
+					<label for="url">URL: </label>
+					<input id="url" type="text" value="http://">
+				</div>
+				<button id="submitUrl">Load page</button>
+			</div>
+			<div id="tools">
+				<label for="add">Add lines: </label>
+				<div id="add" class="section">
+					<button id="vertLine">Vertical line</button>
+					<button id="horizLine">Horizontal line</button>
+				</div>
+
+				<label for="lines">Change line color: </label>
+				<div id="lines" class="section">
+					<button id="white" class="changeColor">White</button>
+					<button id="black" class="changeColor">Black</button>
+				</div>
+
+				<label for="handles">Change handle color: </label>
+				<div id="handles" class="section">
+					<button id="blue" class="changeColor">Blue</button>
+					<button id="yellow" class="changeColor">Yellow</button>
+					<button id="transparent" class="changeColor">Transparent</button>
+				</div>
+
+				<label for="remove">Remove lines: </label>
+				<div class="section">
+					<button id="remove">Remove all lines</button>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<div id="frameContainer">
+		<iframe id="page"></iframe>
+	</div>
+
+	<script type="application/javascript" src="lib/jquery-3.2.1.min.js"></script>
+	<script type="application/javascript" src="lib/jquery-ui.min.js"></script>
+	<script type="application/javascript" src="align.js"></script>
+</body>
+</html>
