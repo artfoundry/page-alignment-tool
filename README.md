@@ -1,7 +1,7 @@
 # page-align
-Tool to display alignment guides over a page.  Just clone the repo and open index.html to use.
+Tool to display alignment guides over a page - best used for local page development. Note, if a site has a same-origin policy, then this tool won't be able to load the page.
 
-For webedit, simply click the Load page button.  For another page, change the URL - note, www.apple.com won't work for security reasons.
+Just clone the repo and open index.html to use.
 
 The panel can be dragged anywhere in the window by clicking and dragging in the panel contents or on the drag icon in the titlebar.
 
