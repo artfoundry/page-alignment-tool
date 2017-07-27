@@ -10,42 +10,58 @@
 		<div id="titlebar"><span id="menu-icon" class="ui-icon ui-icon-circle-triangle-n"></span></div>
 		<span class="ui-icon ui-icon-arrow-4-diag"></span>
 		<div id="content">
-			<div class="section">
-				<div>
+			<div class="section subsections-row">
+				<div class="subsection-left">
 					<label for="url">URL: </label>
-					<input id="url" type="text" value="http://">
+					<input id="url" type="text" value="http://webedit.apple.com/">
+					<button id="submit-url">Load</button>
 				</div>
-				<button id="submitUrl">Load page</button>
+				<div class="subsection-right">
+					<label class="file-input-container" for="browse-files">File:
+						<input id="browse-files" type='file' value="Browse files">
+					</label>
+				</div>
 			</div>
 			<div id="tools">
 				<label for="add">Add lines: </label>
 				<div id="add" class="section">
-					<button id="vertLine">Vertical line</button>
-					<button id="horizLine">Horizontal line</button>
+					<div>
+						<button id="vert-line" class="line-button">Vertical line</button>
+						<button id="horiz-line" class="line-button">Horizontal line</button>
+					</div>
+					<div>
+						<button id="vert-measure-line1" class="line-button">First vert measuring line</button>
+						<button id="vert-measure-line2" class="line-button" disabled>Second vert measuring line</button>
+					</div>
+					<div>
+						<button id="horiz-measure-line1" class="line-button">First horiz measuring line</button>
+						<button id="horiz-measure-line2" class="line-button" disabled="">Second horiz measuring line</button>
+					</div>
+				</div>
+				<div class="section subsections-row">
+					<div id="lines" class="subsection-left">
+						<label for="lines">Change line color: </label>
+						<button id="white" class="change-color">White</button>
+						<button id="black" class="change-color">Black</button>
+					</div>
+
+					<div id="handles" class="subsection-right">
+						<label for="handles">Change handle color: </label>
+						<button id="blue" class="change-color">Blue</button>
+						<button id="yellow" class="change-color">Yellow</button>
+						<button id="transparent" class="change-color">Transparent</button>
+					</div>
 				</div>
 
-				<label for="lines">Change line color: </label>
-				<div id="lines" class="section">
-					<button id="white" class="changeColor">White</button>
-					<button id="black" class="changeColor">Black</button>
-				</div>
-
-				<label for="handles">Change handle color: </label>
-				<div id="handles" class="section">
-					<button id="blue" class="changeColor">Blue</button>
-					<button id="yellow" class="changeColor">Yellow</button>
-					<button id="transparent" class="changeColor">Transparent</button>
-				</div>
-
-				<label for="remove">Remove lines: </label>
 				<div class="section">
-					<button id="remove">Remove all lines</button>
+					<label for="remove">Remove all lines: </label>
+					<button id="remove">Remove</button>
 				</div>
 			</div>
 		</div>
 	</form>
 
-	<div id="frameContainer">
+	<div id="frame-container">
 		<iframe id="page"></iframe>
 	</div>
 
