@@ -130,17 +130,17 @@ label {
 	top: -24px;
 	left: 50%;
 	padding: 5px;
-	border: 1px blue solid;
+	outline: 1px blue solid;
 }
 
 .horiz-lines-distance-value {
 	display: inline-block;
 	position: relative;
 	min-width: 26px;
-	left: -34px;
+	left: -33px;
 	top: 50%;
 	padding: 5px;
-	border: 1px blue solid;
+	outline: 1px blue solid;
 	transform: rotateZ(-90deg);
 	text-align: center;
 }
