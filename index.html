@@ -7,61 +7,99 @@
 </head>
 <body>
 	<form>
-		<div id="titlebar"><span id="menu-icon" class="ui-icon ui-icon-circle-triangle-n"></span></div>
+		<div id="titlebar-tools" class="titlebar"><span class="menu-icon ui-icon ui-icon-circle-triangle-n"></span></div>
 		<span class="ui-icon ui-icon-arrow-4-diag"></span>
-		<div id="content">
+		<div class="content content-padding">
 			<div class="section subsections-row">
 				<div class="subsection-left">
 					<label for="url">URL: </label>
 					<input id="url" type="text" value="http://webedit.apple.com/">
-					<button id="submit-url">Load</button>
+					<button id="submit-url"><span class="load-icon"></span></button>
 				</div>
 				<div class="subsection-right">
 					<label class="file-input-container" for="browse-files">File:
 						<input id="browse-files" type='file' value="Browse files">
 					</label>
+					<div class="slider-container">
+						<span class="overlay-icon"></span>
+						<span class="file-icon file-slider-position"></span>
+						<div id="overlay-slider"></div>
+					</div>
+					<button id="delete-file">
+						<span class="file-icon"></span>
+						<span class="delete-icon"></span>
+					</button>
 				</div>
 			</div>
 			<div id="tools">
 				<label for="add">Add lines: </label>
 				<div id="add" class="section">
-					<div>
-						<button id="vert-line" class="line-button">Vertical line</button>
-						<button id="horiz-line" class="line-button">Horizontal line</button>
+					<div class="line-buttons">
+						<button id="vert-line" class="line-button"><span class="vline-icon"></span></button>
+						<button id="horiz-line" class="line-button"><span class="hline-icon"></span></button>
 					</div>
-					<div>
-						<button id="vert-measure-line1" class="line-button">First vert measuring line</button>
-						<button id="vert-measure-line2" class="line-button" disabled>Second vert measuring line</button>
+					<div class="line-buttons">
+						<button id="vert-measure-line1" class="line-button">
+							<span class="vline-measure-icon-first"></span>
+							<span class="vline-measure-icon-middle"></span>
+						</button>
+						<button id="vert-measure-line2" class="line-button" disabled>
+							<span class="vline-measure-icon-middle"></span>
+							<span class="vline-measure-icon-second"></span>
+						</button>
 					</div>
-					<div>
-						<button id="horiz-measure-line1" class="line-button">First horiz measuring line</button>
-						<button id="horiz-measure-line2" class="line-button" disabled="">Second horiz measuring line</button>
+					<div class="line-buttons">
+						<button id="horiz-measure-line1" class="line-button">
+							<span class="hline-measure-icon-first"></span>
+							<span class="hline-measure-icon-middle"></span>
+						</button>
+						<button id="horiz-measure-line2" class="line-button" disabled>
+							<span class="hline-measure-icon-middle"></span>
+							<span class="hline-measure-icon-second"></span>
+						</button>
 					</div>
 				</div>
 				<div class="section subsections-row">
 					<div id="lines" class="subsection-left">
-						<label for="lines">Change line color: </label>
-						<button id="white" class="change-color">White</button>
-						<button id="black" class="change-color">Black</button>
+						<label for="lines">Line color: </label>
+						<button id="white" class="change-color"></button>
+						<button id="black" class="change-color"></button>
 					</div>
 
 					<div id="handles" class="subsection-right">
-						<label for="handles">Change handle color: </label>
-						<button id="blue" class="change-color">Blue</button>
-						<button id="yellow" class="change-color">Yellow</button>
-						<button id="transparent" class="change-color">Transparent</button>
+						<label for="handles">Handle color: </label>
+						<button id="blue" class="change-color"></button>
+						<button id="yellow" class="change-color"></button>
+						<button id="transparent" class="change-color"></button>
 					</div>
 				</div>
 
-				<div class="section">
-					<label for="remove">Remove all lines: </label>
-					<button id="remove">Remove</button>
+				<div class="section subsections-row">
+					<div id="remove-lines" class="subsection-left">
+						<label for="remove-lines">Remove all lines: </label>
+						<button id="remove">
+							<span class="vline-icon"></span>
+							<span class="hline-icon"></span>
+							<span class="delete-icon"></span>
+						</button>
+					</div>
+
+					<div id="drag-target" class="subsection-right">
+						<label for="drag-target">Drag: </label>
+						<button id="drag-line-select" class="active"><span class="vline-icon"></span></button>
+						<button id="drag-handle-select"><span class="handle-icon"></span></button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</form>
 
 	<div id="frame-container">
+		<div id="file-container">
+			<div id="titlebar-file" class="titlebar"><span class="menu-icon ui-icon ui-icon-circle-triangle-n"></span></div>
+			<span class="ui-icon ui-icon-arrow-4-diag"></span>
+			<iframe id="file" class="content"></iframe>
+		</div>
 		<iframe id="page"></iframe>
 	</div>
 

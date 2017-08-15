@@ -1,3 +1,25 @@
+/***********
+  iframes
+***********/
+
+#frame-container {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	height: 3000px;
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+/***********
+    Form
+***********/
+
 form {
 	position: absolute;
 	top: 8%;
@@ -10,14 +32,7 @@ form {
 	cursor: move;
 }
 
-button {
-	width: 120px;
-	max-width: 200px;
-	height: 30px;
-	margin: 3px;
-}
-
-#titlebar {
+.titlebar {
 	width: 100%;
 	height: 30px;
 	background-color: darkgray;
@@ -28,65 +43,246 @@ button {
 	position: absolute;
 	right: 50%;
 	top: 10px;
+	cursor: move;
 }
 
-#content {
-	padding: 20px;
+button {
+	position: relative;
+	width: 40px;
+	max-width: 200px;
+	height: 40px;
+	margin: 3px;
+	background-color: lightgreen;
+	border: 1px solid darkslategray;
+	border-radius: 4px;
+	box-shadow: 1px 1px 2px darkslategray;
+	cursor: pointer;
 }
 
-#url {
-	width: 150px;
+button:disabled {
+	background-color: darkgray;
+	cursor: default;
+}
+
+button.active {
+	background-color: lightyellow;
+}
+
+#white {
+	background-color: white;
+}
+
+#black {
+	background-color: black;
+}
+
+#blue {
+	background-color: blue;
+}
+
+#yellow {
+	background-color: yellow;
+}
+
+#transparent {
+	background-color: transparent;
+	outline: 1px dotted black;
+	outline-offset: -8px;
+}
+
+.slider-container {
+	margin: 10px 0;
+}
+
+#overlay-slider {
+	display: inline-block;
+	position: relative;
+	width: 100px;
+	top: -5px;
+	left: -10px;
+}
+
+/* icons */
+
+.load-icon {
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	width: 0;
+	height: 20px;
 	border: 1px solid black;
 }
 
-#frame-container {
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 90%;
-	height: 3000px;
+.load-icon::after {
+	content: 'V';
+	font-weight: 400;
+	position: absolute;
+	width: 20px;
+	top: 5px;
+	left: -10px;
+	font-size: 16px;
+	border-bottom: 2px solid black;
 }
 
-#page {
-	width: 100%;
-	height: 3000px;
+.file-icon {
+	display: inline-block;
+	position: relative;
+	width: 15px;
+	height: 20px;
+	border: 2px solid black;
+	border-radius: 8px 0 0 0;
+}
+
+.file-slider-position {
+	left: 135px;
+}
+
+.overlay-icon {
+	display: inline-block;
+	position: relative;
+	width: 15px;
+	height: 20px;
+	border: 2px dotted black;
+	border-radius: 8px 0 0 0;
+	z-index: 2;
+}
+
+.vline-icon {
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	width: 0;
+	height: 25px;
+	border: 1px solid black;
+}
+
+.hline-icon {
+	display: inline-block;
+	position: absolute;
+	top: 18px;
+	left: 6px;
+	width: 25px;
+	height: 0;
+	border: 1px solid black;
+}
+
+.vline-measure-icon-first {
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	width: 0;
+	height: 25px;
+	border-left: 2px solid black;
+}
+
+.vline-measure-icon-middle {
+	display: inline-block;
+	position: absolute;
+	top: 20px;
+	left: 15px;
+	width: 10px;
+	height: 0;
+	border: 1px dotted black;
+}
+
+.vline-measure-icon-second {
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	left: 30px;
+	width: 0;
+	height: 25px;
+	border-left: 2px solid black;
+}
+
+.hline-measure-icon-first {
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	left: 6px;
+	width: 25px;
+	height: 0;
+	border: 1px solid black;
+}
+
+.hline-measure-icon-middle {
+	display: inline-block;
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	width: 0;
+	height: 10px;
+	border: 1px dotted black;
+}
+
+.hline-measure-icon-second {
+	display: inline-block;
+	position: absolute;
+	top: 28px;
+	left: 6px;
+	width: 25px;
+	height: 0;
+	border: 1px solid black;
+}
+
+.handle-icon {
+	display: inline-block;
+	position: absolute;
+	top: 7px;
+	left: 7px;
+	width: 20px;
+	height: 20px;
+	border: 2px solid black;
+	border-radius: 15px;
+}
+
+.delete-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	color: red;
+	opacity: .6;
+}
+
+.delete-icon::after {
+	content: 'X';
+	font-weight: 800;
+	font-size: 30px;
+	line-height: 38px;
+}
+
+/* sections */
+
+.content-padding {
+	padding: 20px;
 }
 
 label {
 	display: block;
-	padding: 10px 0 0 0;
-}
-
-.file-input-container {
-	position: relative;
-	overflow: hidden;
-	height: 40px;
-}
-
-.file-input-container [type=file] {
-	position: absolute;
-	left: 0;
-	top: 30px;
 }
 
 .section {
 	display: flex;
-	flex-direction: column;
-	padding: 10px 0;
+	margin-bottom: 15px;
+	padding: 15px 0;
 	border-bottom: 2px solid gray;
 }
 
 .section.subsections-row {
 	flex-direction: row;
+	padding-top: 0;
+}
+
+#tools .section.subsections-row label {
+	padding-bottom: 10px;
 }
 
 .section:last-child {
 	margin-bottom: 10px;
 	border-bottom: 0;
-}
-
-.section div {
-	padding: 5px;
 }
 
 .section .subsection-left {
@@ -99,6 +295,48 @@ label {
 	flex-basis: 50%;
 	padding-left: 10px;
 }
+
+.section .line-buttons {
+	padding: 0 10px;
+	border-right: 1px solid gray;
+}
+
+.section .line-buttons:last-child {
+	border: 0;
+}
+
+#url {
+	width: 150px;
+	margin: 15px 0;
+	border: 1px solid black;
+}
+
+#file-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.overlay {
+	opacity: 0.5;
+}
+
+.file-input-container {
+	position: relative;
+	overflow: hidden;
+	height: 65px;
+}
+
+.file-input-container [type=file] {
+	position: absolute;
+	left: 0;
+	top: 30px;
+}
+
+
+/***********
+   Lines
+***********/
 
 .vert-line {
 	position: absolute;
@@ -156,8 +394,8 @@ label {
 .line-handle {
 	display: inline-block;
 	position: relative;
-	width: 100px;
-	height: 100px;
+	width: 50px;
+	height: 50px;
 	text-align: center;
 	vertical-align: middle;
 	background-color: yellow;
@@ -166,12 +404,25 @@ label {
 	z-index: 10000;
 }
 
+.line-handle:hover {
+	width: 100px;
+	height: 100px;
+}
+
 .horiz-line-handle {
+	top: -25px;
 	left: 50%;
-	top: -50px;
+}
+
+.horiz-line-handle:hover {
+	transform: translateX(-25px) translateY(-25px);
 }
 
 .vert-line-handle {
 	top: 50px;
-	left: -50px;
+	left: -25px;
+}
+
+.vert-line-handle:hover {
+	transform: translateX(-25px) translateY(-25px);
 }
