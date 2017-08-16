@@ -94,7 +94,7 @@ button.active {
 	margin: 10px 0;
 }
 
-#overlay-slider {
+.slider {
 	display: inline-block;
 	position: relative;
 	width: 100px;
@@ -102,7 +102,21 @@ button.active {
 	left: -10px;
 }
 
+#size-slider {
+	width: 85px;
+	top: 0;
+}
+
+#size-slider-value {
+	width: 35px;
+	margin-right: 15px;
+}
+
 /* icons */
+
+.icon {
+	display: inline-block;
+}
 
 .load-icon {
 	display: inline-block;
@@ -125,26 +139,27 @@ button.active {
 }
 
 .file-icon {
-	display: inline-block;
-	position: relative;
 	width: 15px;
 	height: 20px;
 	border: 2px solid black;
 	border-radius: 8px 0 0 0;
 }
 
-.file-slider-position {
+.slider-right-icon {
+	position: relative;
 	left: 135px;
 }
 
+.slider-size-right {
+	left: 125px;
+}
+
 .overlay-icon {
-	display: inline-block;
 	position: relative;
 	width: 15px;
 	height: 20px;
 	border: 2px dotted black;
 	border-radius: 8px 0 0 0;
-	z-index: 2;
 }
 
 .vline-icon {

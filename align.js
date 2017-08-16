@@ -154,9 +154,15 @@ function switchDragTarget(targetType) {
 	$('#' + nonTargetType).removeClass('active');
 }
 
+function getFileEl() {
+	return document.getElementById('file').contentDocument.getElementsByTagName('img')[0];
+}
+
 function listen() {
 	let sliderValue = 0,
 		$overlaySlider = $('#overlay-slider'),
+		$sizeSlider = $('#size-slider'),
+		fileEl,
 		file;
 
 	$('#browse-files').change(function(event) {
@@ -181,12 +187,27 @@ function listen() {
 	$overlaySlider.slider({
 		value: 100,
 		slide: function() {
-			if (file) {
+			fileEl = getFileEl();
+			if (fileEl) {
 				sliderValue = $overlaySlider.slider('value');
 				$('#file').css('opacity', sliderValue * .01);
 			}
 		}
 	});
+
+	$sizeSlider.slider({
+		value: 100,
+		min: 49,
+		max: 201,
+		slide: function() {
+			fileEl = getFileEl();
+			if (fileEl) {
+				sliderValue = $sizeSlider.slider('value');
+				fileEl.style.cssText = 'width : ' + sliderValue + '%';
+				$('#size-slider-value').text(sliderValue + '%');
+			}
+		}
+	})
 
 	$('#submit-url').click(function(event) {
 		event.preventDefault();
