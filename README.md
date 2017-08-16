@@ -3,7 +3,7 @@ Tool to display alignment guides over a page - best used for local page developm
 
 Just clone the repo and open index.html to use.
 
-To load a local file, just click the browse button and select a file.  You should be able to load any file that can be displayed in a browser window (jpg, png, gif, pdf, txt, html, etc.), though images work best.  The file can be dragged or collapsed using its title bar, and its opacity can be changed with the slider in the tool panel (allows you to overlay a file, like a comp, over a web page).  File can be removed by clicking on the delete button below the slider.
+To load a local file, just click the browse button and select a file.  You should be able to load any file that can be displayed in a browser window (jpg, png, gif, pdf, txt, html, etc.), though images work best.  The file can be dragged or collapsed using its title bar, its opacity can be changed with the slider in the tool panel (allows you to overlay a file, like a comp, over a web page), and its size can be changed with the size slider.  File can be removed by clicking on the delete button below the slider.
 
 The panel can be dragged anywhere in the window by clicking and dragging in the panel contents or on the drag icon in the titlebar.
 
